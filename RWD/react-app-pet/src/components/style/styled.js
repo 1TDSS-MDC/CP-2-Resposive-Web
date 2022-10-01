@@ -32,21 +32,23 @@ export const DivTarefa = styled.div`
     padding: 20px;
     text-align: center;
     width: 350px;
-    height: 430px;
+    height: 450px;
     margin: 10px;
     position: relative;
     h2,p{padding-bottom: 10px;}
     button{position:absolute;top:10px; right:10px}
+
 `
 
 export const DivForm = styled.div`
-    width:100%;
-    padding:20px;
+    width:35%;
+    height:15%;
+    padding:25px;
     background-color:#093;
-    form{width:50%; margin:auto;}
-    form input, form textarea{padding:5px; width:80%;}
-    for textarea{height:80px;}
-    form button{padding:10px; background: #3c3; color:#fff;}
+    form{width:100%; margin:auto; float:left;}
+    form input, form textarea{padding:5px; width:98%; margin:3px; border: 1px solid rgba(0,0,0,.1);}
+    form textarea{height:110px;}
+    form button{padding:10px; background: #3c3; color:#fff; width:40%;}
     `
 
 export const DivHome = styled.div`
