@@ -2,7 +2,7 @@ import React from 'react'
 import { DivTarefa } from './style/styled'
 import {FaDog as X } from 'react-icons/fa';
 
-export default function PetTarefa(props) {
+export default function PetCadastrado(props) {
   return (
     <DivTarefa>
       <p>Nome: {props.nome}</p>

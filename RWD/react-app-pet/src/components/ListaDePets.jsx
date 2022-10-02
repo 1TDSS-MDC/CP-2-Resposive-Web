@@ -1,31 +1,35 @@
 import React, { useState } from 'react'
 import { DivLista } from './style/styled'
 import PetCadastro from './PetCadastro'
-import PetTarefa from './PetTarefa'
+import PetCadastrado from './PetCadastrado'
 
 export default function ListaDePets() {
 
     const [tarefa, setTarefa] = useState([{
-        nome:'Pac0',
+        nome:'Paco',
         idade:'3',
         raca:'Vira-Lata',
-        tamanho:'1.50',
+        tamanho:'Medio',
         dono:'Matheus',
-        telefone:'22222222',
-        observacao:'N',
+        telefone:'(11)94549-3022',
+        observacao:'Cachorro docil',
+        
     },
+
 
 ])
 
     const [nTarefa, setNTarefa] = useState({
-        nome:'', idade:'',raca:'', tamanho:'', dono:'', telefone:'', observacao:'',
+        nome:'', idade:'',raca:'', tamanho:'', dono:'', telefone:'', observacao:'', imagem:''
+        
     })
+
 
     const addTarefa= e=> {
         
        e.preventDefault()
 
-       setNTarefa({'nome':'', 'idade':'','raca':'', 'tamanho':'', 'dono':'', 'telefone':'', 'observacao':'',})
+       setNTarefa({'nome':'', 'idade':'','raca':'', 'tamanho':'', 'dono':'', 'telefone':'', 'observacao':''})
     
     setTarefa([...tarefa,nTarefa])
 }
@@ -55,6 +59,7 @@ export default function ListaDePets() {
             //inclui alguma observação do pet
             setNTarefa({'nome':nTarefa.nome, 'idade':nTarefa.idade, 'raca':nTarefa.raca, 'tamanho':nTarefa.tamanho, 'dono':nTarefa.dono, 'telefone':nTarefa.telefone, 'observacao':value})
         }
+        
     }
 
     const removerTarefa = tar=>{
@@ -67,7 +72,7 @@ export default function ListaDePets() {
     <DivLista>
         <PetCadastro addTarefa={addTarefa} tarefa={nTarefa} digit={captura}/>
             {tarefa.map((tar, i)=>(
-                <PetTarefa
+                <PetCadastrado
                 key={i}
                 nome={tar.nome}
                 idade={tar.idade}
@@ -76,6 +81,7 @@ export default function ListaDePets() {
                 dono={tar.dono}
                 telefone={tar.telefone}
                 observacao={tar.observacao}
+                imagem={tar.imagem}
                 remove={removerTarefa.bind(this,tar)}
                 />
             ))}

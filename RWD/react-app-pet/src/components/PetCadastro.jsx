@@ -6,6 +6,7 @@ export default function PetCadastro(props) {
 
     return(
         <DivForm>
+            <h3>Cadastro de pets:</h3>
             <form method="post" onSubmit={props.addTarefa}>
                 <div>
                     <input name='nome' placeholder='Nome do pet' 
@@ -27,12 +28,12 @@ export default function PetCadastro(props) {
                     <input name='dono' placeholder='Nome do dono' 
                     value={props.tarefa.dono} onChange={props.digit} />
                 </div>
-                <div>
+                 <div>
                     <input name='telefone' placeholder='Telefone' 
                     value={props.tarefa.telefone} onChange={props.digit} />
                 </div>
                 <div>
-                    <textarea name='observacao' placeholder='Observação' 
+                    <input name='observacao' placeholder='Observação' 
                     value={props.tarefa.observacao} onChange={props.digit} />
                 </div>
                 <button type='submit'>Cadastrar Pet</button>
